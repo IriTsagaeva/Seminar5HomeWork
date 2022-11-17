@@ -36,7 +36,7 @@ int ReturnEvenNumbers (double[] array)
 Console.Clear();
 Console.WriteLine("Пожалуйста, введите количество элементов в массиве");
 bool text = Int64.TryParse(Console.ReadLine(), out long mySize);
-if (text)
+if (text && mySize>0)
 {
     double[] myArray = CreateNewRandomArray(mySize);
     PrintArray(myArray);
@@ -44,5 +44,5 @@ if (text)
 }
 else
 {
-    Console.WriteLine ("Пожалуйста, введите число!!!");
+    Console.WriteLine ("Пожалуйста, введите число больше нуля!!!");
 }
